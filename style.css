@@ -1,0 +1,564 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:PT Root UI ;
+    src: url(./fonts/pt-root-ui.regular.ttf);
+    font-weight: normal;
+}
+.first-row>div p {
+    padding: 0 20px;
+}
+.row{
+    position: relative;
+}
+.row>div{
+    padding: 0 50px;
+}
+.first-row{
+    display: flex;
+}
+.first-row>div{
+    width: 480px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.first-row>div svg{
+    margin-top: 172px;
+
+}
+.first-row>div:nth-child(odd){
+    background: #F9F9F9;
+
+
+}
+.first-row>div p{
+    width: 100%;
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+    position: absolute;
+    top: 289px;
+    max-width: 409px;
+
+}
+
+.third-row, .fourth-row{
+    display: flex;
+}
+.third-row>div{
+    width: 481px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+
+}
+.third-row>div:nth-child(even){
+    background: #FAFAFA;
+    width: 489px;
+
+}
+.third-row>div svg{
+    margin-top: 129px ;
+}
+.third-row>div p{
+
+    max-width: 368px;
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #000000;
+
+}
+.fourth-row>div p{
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #000000;
+    max-width: 338px;
+
+
+}
+.fourth-row>div h2{
+    position: absolute;
+    top: 198px;
+    max-width: 409px;
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+
+    color: #000000;
+
+}
+.fourth-row>div{
+    width: 481px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+
+}
+.fourth-row>div:nth-child(even){
+    width: 489px;
+}
+.fourth-row>div:nth-child(odd){
+    background: #FAFAFA;
+}
+.fourth-row>div svg{
+    margin-top: 69px;
+}
+.third-row, .fourth-row {
+    margin-left: 475px;
+}
+/*css animatons*/
+.people:hover path:nth-child(odd){
+    transform: translateX(49px);
+    transition: 0.3s;
+}
+.people:hover path:nth-child(even){
+    transform: translateX(-49px);
+    transition: all 0.3s;
+
+}
+.people:hover svg ellipse {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+
+}
+.people:hover svg circle {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+
+}
+
+
+ path, circle, ellipse{
+    transition: all 0.3s;
+
+
+}
+svg{
+    overflow: unset;
+    position: relative;
+}
+.delay:hover path:nth-child(odd) {
+    animation: delay 0.5s linear forwards;
+
+}
+.delay.mouse-leave path:nth-child(odd) {
+    animation: delay-revert 0.2s linear reverse;
+
+}
+.delay:hover path:nth-child(odd) {
+    transition: all 0.3s;
+
+}
+.delay:hover path:nth-child(even) {
+    /* transform:    translateX(155px)  rotate(180deg) translateY(-80px);
+    transition: all 0.4s;
+    transition-delay: 0.1s;
+     */
+     /* transform:    translateY(30px) translateX(-40px)  rotate(175deg) ; */
+     transform-origin:center;
+     animation: delay2 0.4s linear forwards;
+     
+    
+
+}
+.delay.mouse-leave path:nth-child(even){
+    animation: delay2-revert 0.4s linear reverse;
+}
+@keyframes delay2{
+    25%{
+        transform:    translateY(-20px) translateX(0px)  rotate(43.75deg) ;
+        transform-origin: center;
+
+
+
+    }
+
+    100%{
+        transform:    translateY(0px) translateX(40px)  rotate(180deg) ;
+
+
+    }
+
+}
+@keyframes delay2-revert{
+    0%{
+        transform-origin: center;
+
+
+
+    }
+    25%{
+        transform:     rotate(0deg);
+        transform-origin: center;
+
+
+
+    }
+    
+
+    100%{
+        transform:     rotate(43.75deg) ;
+        transform-origin: center;
+
+
+
+    }
+
+}
+
+@keyframes delay{
+    0%{
+        
+        
+    }
+    30%{
+        transform:  translateX(95px) rotate(150deg) translateY(-85px);
+    
+        
+
+    }
+    45%{
+        transform:  translateX(120px) rotate(175deg) translateY(-85px);
+    
+        
+
+    }
+    
+    60%{
+        transform:  translateX(135px) rotate(180deg) translateY(-85px);
+
+
+    }
+    75%{
+        transform:  translateX(150px) rotate(180deg) translateY(-85px);
+
+
+    }
+    
+    95%{
+        transform:  translateX(157px) rotate(180deg) translateY(-85px);
+
+        
+    }
+    100%{
+        transform:  translateX(157px) rotate(180deg) translateY(-85px);
+
+        
+    }
+
+}
+@keyframes delay-revert{
+    0%{
+        
+        
+    }
+    30%{
+        transform:  translateX(95px) rotate(150deg) translateY(-85px);
+    
+        
+
+    }
+    45%{
+        transform:  translateX(120px) rotate(175deg) translateY(-85px);
+    
+        
+
+    }
+    
+    60%{
+        transform:  translateX(135px) rotate(180deg) translateY(-85px);
+
+
+    }
+    75%{
+        transform:  translateX(150px) rotate(180deg) translateY(-85px);
+
+
+    }
+    
+    95%{
+        transform:  translateX(157px) rotate(180deg) translateY(-85px);
+
+        
+    }
+    100%{
+        transform:  translateX(157px) rotate(180deg) translateY(-85px);
+
+        
+    }
+
+}
+.broadcasting:hover path{
+    transform: translateY(0px)  rotate(360deg)  ;
+    transform-origin: inherit;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: all 0.3s;
+}
+.broadcasting path{
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: translateY(10px);
+    
+    
+}
+.broadcasting:hover ellipse{
+    transform: unset;
+    transition: all 0.3s;
+
+
+}
+
+.broadcasting svg ellipse {
+    transform: translateY(10px);
+}
+.ar:hover svg circle:nth-child(n+2) {
+    transform: translateY(28px);
+    transition: all 0.3s;
+
+}
+.ar:hover path {
+    transform:translateY(-25px)  translateX(117px)  rotate(90deg);
+    transition: all 0.3s;
+
+}
+.circle circle {
+    transform: scale(0);
+    transform-origin: center;
+}
+.circle.scrolled circle{
+    transform: unset;
+
+}
+.circle.scrolled path:nth-child(even) {
+    transform: unset;
+}
+.circle path:nth-child(even) {
+    transform: translateY(606px) translateX(-686px) rotate(-45deg);
+    transition: all 1s;
+
+}
+
+.roles:hover svg path:nth-child(even) {
+    transform: rotate(360deg);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+.roles svg path:nth-child(even){
+    transform-box: fill-box;
+    transform-origin: center;
+
+}
+.roles:hover ellipse:nth-child(even) {
+    transform: translateY(-2px);
+}
+.internet-quality:hover svg path {
+    transform: rotate(180deg) translateX(5px);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.internet-quality svg path {
+    transform-box: fill-box;
+    transform-origin: center;
+
+}
+.internet-quality svg rect{
+    transition: all 0.2s;
+
+}
+.internet-quality:hover svg rect {
+    transition: all 0.2s;
+    x: -39;
+    y: 144;
+
+
+
+
+
+   
+}
+
+@keyframes handle-slide{
+    
+}
+@-webkit-keyframes handle-slide{
+    0%   {transform: rotate(40deg) ; }
+    10%{
+        
+
+    }
+   
+
+}
+.addaptive:hover svg path:nth-child(4) {
+    transform: translateY(-16px);
+    transition: all 0.3s;
+
+}
+.addaptive svg path:nth-child(4) {
+    transition: all 0.3s;
+    transform: translatey(20px) rotate(-180deg);
+    transform-box: fill-box;
+    transform-origin: center;
+    
+
+}
+.addaptive:hover svg path:nth-child(2) {
+    transform: translateX(3px) translateY(-3px);
+    transition: all 0.3s;
+
+}
+.addaptive:hover svg rect:nth-child(3) {
+    x: 75;
+    transition: all 0.3s;
+
+
+}
+.addaptive svg rect:nth-child(3) {
+    x: 45;
+    transition: all 0.3s;
+
+
+}
+  
+
+.addaptive svg{
+    overflow: unset;
+}
+.content-management:hover path:nth-child(even) {
+    transform: translateX(42px);
+    transition: all 0.2s;
+    animation: content-management 0.3s;
+
+}
+.content-management:hover path:nth-child(odd) {
+    transform: translateX(-28px);
+    transition: all 0.3s;
+
+}
+@keyframes content-management{
+    0%{
+        transform: translateX(42px);
+    }
+    80%{
+        transform: translateX(48px);
+    }
+    100%{
+        transform: translateX(42px);
+    }
+
+}
+.content-management path{
+    transition: all 0.2s;
+}
+.live-recording:hover svg path {
+    /* transform:  translateX(-123px) rotate(180deg); */
+    /* transform-origin: center;*/
+    /* transform-box: fill-box; */
+    /* transition: all 0.2s;  */
+    animation: live-recording 0.5s linear forwards;
+
+}
+@keyframes live-recording{
+    25%{
+        transform:  translateX(-130px) rotate(145deg);
+
+
+    }
+    50%{
+        transform:  translateX(-130px) rotate(178deg);
+
+
+    }
+    75%{
+        transform:  translateX(-110px) rotate(178deg);
+
+
+    }
+    80%{
+        transform:  translateX(-120px) rotate(178deg);
+
+
+    }
+    90%{
+        transform:  translateX(-118px) rotate(178deg);
+
+
+    }
+    100%{
+        transform:  translateX(-120px) rotate(180deg);
+
+
+    }
+
+    
+}
+.live-recording svg path {
+
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: live-recording-reverse 0.4s  reverse ;
+
+
+}
+@keyframes live-recording-reverse{
+    50%{
+        transform:  translateX(-120px) rotate(180deg);
+
+
+    }
+   
+ 
+    100%{
+        transform:  translateX(-120px) rotate(180deg);
+
+
+    }
+
+
+    
+}
+.live-recording:hover svg circle {
+    transform: translateX(54px);
+}
+
+/*media queries*/
+@media(max-width: 1400px){
+    .first-row>div p {
+        font-size: 20px;
+    }
+    .third-row, .fourth-row {
+        margin-left: 0;
+        display: flex;
+    }
+
+}
