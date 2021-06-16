@@ -1,138 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animations</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamcast</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!--  <link rel="stylesheet" href="assets/wow/css/libs/animate.css">-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 <body>
-    <div class="first-row row">
-        <div class="people">
-            <svg width="118" height="67" viewBox="0 0 118 67" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="34" cy="22.5" rx="23" ry="22.5" fill="#A5B9FF"/>
-                <circle cx="82.5" cy="22.5" r="22.5" fill="#FEBA53"/>
-                <path d="M34.5 33C15.4462 33 0 48.2223 0 67H69C69 48.2223 53.5538 33 34.5 33Z" fill="#FEBA53"/>
-                <path d="M83 33C63.67 33 48 48.2223 48 67H118C118 48.2223 102.33 33 83 33Z" fill="#A5B9FF"/>
-                </svg>
-                <p>Up to 100 people 
-                    in Room
-                    </p>
-        </div>
-        <div class="delay">
-            <svg width="122" height="84" viewBox="0 0 122 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="79.5" cy="42" rx="42.5" ry="42" fill="#A5B9FF"/>
-                <path d="M115 42C115 22.1178 98.8823 6 79 6V42H115Z" fill="#FEBA53"/>
-                <path d="M34.1995 13.2322L33.5149 78.9524L73.5626 45.7499L34.1995 13.2322Z" fill="#FEBA53"/>
-                </svg>
-            <p>Less than 50ms delay</p>
-                
-        </div>
-        <div class="broadcasting">
-            <svg width="88" height="99" viewBox="0 0 88 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="45.5" cy="40" rx="39.5" ry="40" fill="#A5B9FF"/>
-                <path d="M38.2502 17.9998L37.7502 66.0002L67.0001 41.7499L38.2502 17.9998Z" fill="#FEBA53"/>
-                <rect y="80" width="88" height="19" fill="#FEBA53"/>
-                </svg>
-            <p>Broadcasting quality for everyday use</p>
-        </div>
-        <div class="ar">
-            <svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="49.5" cy="49.5" r="49.5" fill="#A5B9FF"/>
-                <path d="M49.0697 52.6297L49.4913 83.1938L67.7375 67.3055L49.0697 52.6297Z" fill="#FEBA53"/>
-                <circle cx="28" cy="36" r="9" fill="#FEBA53"/>
-                <circle cx="69" cy="36" r="9" fill="#FEBA53"/>
-                </svg>
-                <p>Immersive AR effects and filters</p>
+<div class="container-fluid main p-0" id="top">
 
-        </div>
+  <!-- HOMEPAGE-->
+  <div class="row p-0 m-0">
+    <div class="col-lg-8 col-12 justify-content-between d-flex flex-row justify-content-md-start align-items-center">
+      <div class="logo-img ms-xl-5 ps-3 ps-sm-5 d-flex justify-content-start align-items-center">
+        <img src="assets/img/logo-left.png" alt="logo" class="animate__animated animate__fadeIn">
+        <img src="assets/img/logo-right.png" alt="logo" class="animate__animated animate__fadeInLeft">
+        <h1 class="m-0 ps-3 animate__animated animate__fadeIn">STREAMCAST</h1>
+      </div>
+      <ul class="nav ms-5 d-flex flex-row animate__animated animate__fadeIn">
+        <li id="show-submenu">
+          <a href="#">Product <img src="assets/img/arrow-down.png" alt="down-arrow"></a>
+          <ul id="product-nav" style="padding-top: 50px">
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Usage</a></li>
+          </ul>
+        </li>
+        <li class="ms-0 ms-md-4 me-0 me-md-4">
+          <a href="#">Team</a>
+        </li>
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
 
-        
+      <script>
+        const field = document.querySelector('#show-submenu');
+        field.querySelector('a').addEventListener('mouseenter', function () {
+          this.querySelector('img').src = 'assets/img/Polygon%203.png';
+        })
+
+        field.querySelector('a').addEventListener('mouseleave', function () {
+          this.querySelector('img').src = 'assets/img/arrow-down.png';
+        })
+      </script>
+
+      <div class="hamburger d-block d-md-none">
+        <button type="button" id="hamburger" class="p-3"><img src="assets/img/menu.png" alt="menu" style="width: 100%;">
+        </button>
+        <ul class="d-none" id="nav-small">
+          <li id="close-menu"><img src="assets/img/times.png" alt="close" style="width: 100%"></li>
+          <li><a href="#">Usage</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Request the demo</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="second-row row">
-        <div class="circle" id="circle">
-            <svg width="928" height="962" viewBox="0 0 928 962" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="-33.9961" width="961" height="959" fill="#A5B9FF"/>
-                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-34" y="0" width="958" height="961">
-                <rect x="-34" width="957.004" height="961" fill="black"/>
-                </mask>
-                <g mask="url(#mask0)">
-                <path d="M923.004 961V0L-35.998 961H923.004Z" fill="white"/>
-                </g>
-                <path d="M423 712C423 850.071 534.929 962 673 962C811.071 962 923 850.071 923 712L423 712Z" fill="black"/>
-                <circle cx="478.5" cy="601.5" r="110.5" fill="#FEBA53"/>
-                </svg>
-        </div>
+    <div class="col-4 d-none d-md-block">
+      <div class="request-demo">
+        <a href="#">Request the demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="row hero-wrapper m-0 mt-3 w-100">
+    <img src="assets/img/circle-left.png" alt="circle"
+         class="circle-left p-0 animate__animated animate__fadeInBottomLeft">
+    <img src="assets/img/circle-middle.png" alt="circle"
+         class="circle-middle p-0 d-none d-md-block animate__animated animate__slideInRight delay">
+    <img src="assets/img/girl-smile.png" alt="girl" class="circle-right p-0 animate__animated animate__slideInRight">
+    <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%206.png" alt="element"
+         class="element p-0 d-none d-md-block animate__animated animate__fadeInRight delay">
+    <div class="hero-text p-0">
+      <h2 class="demo"></h2>
+      <p class="animate__animated animate__fadeIn animate__delay-2s">
+        STREAMCAST is a platform for Real-Time online events that allows streaming of a speaker speech with 1080p30
+        quality and also emerge audience with possible discussion and AR experience
+      </p>
+      <a href="#" class="animate__animated animate__fadeInLeft animate__delay-2s animate__faster request">
+        Request the demo</a>
+    </div>
+  </div>
+  <script>
+    let text = 'Your personal conference in fair quality';
+    let i = 0;
 
+    const effect = function () {
+      if (i < text.length) {
+        document.querySelector('.demo').textContent += text[i];
+        i++;
+        setTimeout(effect, 20);
+      }
+    }
+
+    setTimeout(effect, 2500);
+  </script>
+  <div class="row p-0 m-0 info-section d-flex flex-wrap justify-content-center align-items-center">
+    <div class="people box col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+      <div>
+        <svg width="118" height="67" viewBox="0 0 118 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="34" cy="22.5" rx="23" ry="22.5" fill="#A5B9FF"/>
+          <circle cx="82.5" cy="22.5" r="22.5" fill="#FEBA53"/>
+          <path d="M34.5 33C15.4462 33 0 48.2223 0 67H69C69 48.2223 53.5538 33 34.5 33Z" fill="#FEBA53"/>
+          <path d="M83 33C63.67 33 48 48.2223 48 67H118C118 48.2223 102.33 33 83 33Z" fill="#A5B9FF"/>
+        </svg>
+        <p>Up to 100 people
+          in Room
+        </p>
+      </div>
+    </div>
+    <div class="delay box col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+      <div>
+        <svg width="122" height="84" viewBox="0 0 122 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="79.5" cy="42" rx="42.5" ry="42" fill="#A5B9FF"/>
+          <path d="M115 42C115 22.1178 98.8823 6 79 6V42H115Z" fill="#FEBA53"/>
+          <path d="M34.1995 13.2322L33.5149 78.9524L73.5626 45.7499L34.1995 13.2322Z" fill="#FEBA53"/>
+        </svg>
+        <p>Less than 50ms delay</p>
+
+      </div>
+      </p>
+    </div>
+    <div class="broadcasting box col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+      <div>
+        <svg width="88" height="99" viewBox="0 0 88 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="45.5" cy="40" rx="39.5" ry="40" fill="#A5B9FF"/>
+          <path d="M38.2502 17.9998L37.7502 66.0002L67.0001 41.7499L38.2502 17.9998Z" fill="#FEBA53"/>
+          <rect y="80" width="88" height="19" fill="#FEBA53"/>
+        </svg>
+        <p>Broadcasting quality for everyday use</p>
+      </div>
+    </div>
+    <div class="ar box col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+      <div>
+        <svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="49.5" cy="49.5" r="49.5" fill="#A5B9FF"/>
+          <path d="M49.0697 52.6297L49.4913 83.1938L67.7375 67.3055L49.0697 52.6297Z" fill="#FEBA53"/>
+          <circle cx="28" cy="36" r="9" fill="#FEBA53"/>
+          <circle cx="69" cy="36" r="9" fill="#FEBA53"/>
+        </svg>
+        <p>Immersive AR effects and filters</p>
+      </div>
+    </div>
+  </div>
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test-1">
+        <span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span>
+        <span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span>
+        <span>TECHNOLOGY</span><span>TECHNOLOGY</span><span>TECHNOLOGY</span>
+      </p>
+    </div>
+  </div>
+  <div class="row p-0 m-0 powered-by-wrapper d-flex flex-row powered-by">
+    <div class="left-child col-md-6 p-0">
+      <!-- <img data-aos="fade-right" src="assets/img/powered.png" alt="back"> -->
+      <svg class="powered-by" width="100%" height="100%" viewBox="0 0 414 416" fill="none"
+           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path
+            d="M-0.70166 415.052C113.912 415.052 206.825 322.14 206.825 207.526C206.825 92.9127 113.912 0 -0.70166 0V415.052Z"
+            fill="white"></path>
+        <path class="second"
+              d="M205.96 415.052C320.574 415.052 413.486 322.14 413.486 207.526C413.486 92.9127 320.574 0 205.96 0V415.052Z"
+              fill="white"></path>
+        <rect class="haivision" x="244.098" y="148.449" width="124.44" height="124.44" fill="url(#pattern0)"></rect>
+        <rect x="27.2661" y="160.135" width="102.573" height="40.2501" rx="10.8199" fill="url(#pattern1)"></rect>
+        <path
+            d="M31.7269 266.447H30.4912V259.948H28.2679V258.888H33.9501V259.948H31.7269V266.447ZM35.1134 266.447V258.888H36.3491V266.447H35.1134ZM44.6475 266.447H43.1326L39.4151 260.424H39.3738L39.3996 260.76C39.4479 261.401 39.472 261.987 39.472 262.518V266.447H38.35V258.888H39.8494L43.5566 264.881H43.5876C43.5807 264.801 43.5669 264.514 43.5462 264.017C43.5255 263.517 43.5152 263.128 43.5152 262.849V258.888H44.6475V266.447ZM48.7786 262.337L50.5675 258.888H51.9118L49.3939 263.516V266.447H48.153V263.557L45.6454 258.888H46.9897L48.7786 262.337ZM55.6603 266.447V258.888H56.896V265.387H60.0964V266.447H55.6603ZM66.0888 266.447L65.334 264.348H62.4438L61.7044 266.447H60.4015L63.2296 258.857H64.5739L67.4021 266.447H66.0888ZM65.0082 263.283L64.2999 261.225C64.2482 261.087 64.1758 260.87 64.0827 260.574C63.9931 260.277 63.9311 260.06 63.8966 259.922C63.8036 260.346 63.6674 260.81 63.4882 261.313L62.8057 263.283H65.0082ZM71.011 266.447H69.7753V259.948H67.552V258.888H73.2342V259.948H71.011V266.447ZM78.6734 266.447H74.3975V258.888H78.6734V259.933H75.6332V261.99H78.4821V263.025H75.6332V265.398H78.6734V266.447ZM86.6098 266.447H85.0949L81.3775 260.424H81.3361L81.362 260.76C81.4102 261.401 81.4344 261.987 81.4344 262.518V266.447H80.3124V258.888H81.8118L85.5189 264.881H85.5499C85.543 264.801 85.5292 264.514 85.5086 264.017C85.4879 263.517 85.4775 263.128 85.4775 262.849V258.888H86.6098V266.447ZM91.8215 259.84C91.1115 259.84 90.5531 260.091 90.1463 260.594C89.7396 261.098 89.5362 261.792 89.5362 262.678C89.5362 263.605 89.731 264.307 90.1205 264.782C90.5134 265.258 91.0804 265.496 91.8215 265.496C92.1421 265.496 92.4523 265.465 92.7522 265.403C93.0521 265.337 93.364 265.255 93.688 265.155V266.215C93.0951 266.439 92.423 266.551 91.6716 266.551C90.5651 266.551 89.7155 266.216 89.1226 265.548C88.5298 264.875 88.2333 263.916 88.2333 262.668C88.2333 261.882 88.3764 261.194 88.6625 260.605C88.952 260.015 89.3691 259.564 89.9137 259.25C90.4583 258.937 91.0977 258.78 91.8319 258.78C92.604 258.78 93.3175 258.942 93.9724 259.266L93.5277 260.295C93.2727 260.174 93.0021 260.069 92.716 259.979C92.4333 259.886 92.1352 259.84 91.8215 259.84ZM95.3167 266.447V258.888H96.5524V266.447H95.3167ZM102.829 266.447H98.5533V258.888H102.829V259.933H99.789V261.99H102.638V263.025H99.789V265.398H102.829V266.447ZM108.827 264.395C108.827 265.067 108.584 265.594 108.098 265.977C107.612 266.359 106.941 266.551 106.086 266.551C105.232 266.551 104.532 266.418 103.987 266.153V264.984C104.332 265.146 104.697 265.274 105.083 265.367C105.473 265.46 105.835 265.506 106.169 265.506C106.659 265.506 107.019 265.413 107.25 265.227C107.484 265.041 107.601 264.791 107.601 264.477C107.601 264.195 107.495 263.955 107.281 263.759C107.067 263.562 106.626 263.33 105.957 263.061C105.268 262.782 104.782 262.463 104.499 262.104C104.217 261.746 104.075 261.315 104.075 260.812C104.075 260.181 104.299 259.684 104.747 259.323C105.195 258.961 105.797 258.78 106.552 258.78C107.276 258.78 107.996 258.938 108.713 259.255L108.32 260.264C107.648 259.981 107.048 259.84 106.521 259.84C106.121 259.84 105.818 259.927 105.611 260.103C105.404 260.276 105.301 260.505 105.301 260.791C105.301 260.987 105.342 261.156 105.425 261.298C105.507 261.435 105.644 261.566 105.833 261.691C106.023 261.815 106.364 261.978 106.857 262.182C107.412 262.413 107.819 262.628 108.077 262.828C108.336 263.028 108.525 263.254 108.646 263.505C108.766 263.757 108.827 264.053 108.827 264.395Z"
+            fill="black"></path>
+        <defs>
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0" transform="scale(0.00588235)"></use>
+          </pattern>
+          <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image1" transform="translate(-0.155496 -0.367347) scale(0.00268096 0.00680272)"></use>
+          </pattern>
+          <image id="image0" width="170" height="170"
+                 xlink:href="data:image/png;base64,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"></image>
+          <image id="image1" width="491" height="254"
+                 xlink:href="data:image/png;base64,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"></image>
+        </defs>
+      </svg>
 
     </div>
-    <div class="third-row row">
-        <div></div>
-       <div class="addaptive">
-            <svg width="126" height="104" viewBox="0 0 126 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="126" height="104" rx="10" fill="#FEBA53"/>
-                <path d="M21.8252 30.249L21.3752 73.4494L47.7001 51.6241L21.8252 30.249Z" fill="#A5B9FF"/>
-                <rect x="63" y="104" width="76" height="63" rx="10" transform="rotate(-90 63 104)" fill="#A5B9FF"/>
-                <path d="M84.8252 44.249L84.3752 87.4494L110.7 65.6241L84.8252 44.249Z" fill="#FEBA53"/>
-                </svg>
-                <p>You can predefine platforms that will be allowed for the conference. We support Windows, MacOS and Linux users. Also it is possible to connect with mobile device both on IoS and Android</p>
-       </div>
-       <div class="internet-quality">
-            <svg width="87" height="111" viewBox="0 0 87 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="100.824" width="43.5108" height="19" rx="9.5" transform="rotate(-57.8139 0 100.824)" fill="#FEBA53"/>
-                <ellipse cx="44.5" cy="42" rx="42.5" ry="42" fill="#A5B9FF"/>
-                <path d="M36.8252 20.249L36.3752 63.4494L62.7001 41.6241L36.8252 20.249Z" fill="#FEBA53"/>
-                </svg>
-            <p>Users can enter only rooms where they are allowed</p>
-            
+    <div class="col-md-6 pt-sm-0 right-powered">
+      <h3 class="pt-5 pt-md-4 wow fadeInUp">
+        STREAMCAST is powered by SRT – leading streaming protocol developed HAIVISION
+      </h3>
+      <p>Combined with our own technologies designed for synchronizing dozens of cameras in the real-time for the
+        virtual production we were able to achieve tremendous picture quality improvement comparing other video
+        conference systems that are currently in wide use
+      </p>
+      <a href="#">More about technology</a>
+    </div>
+  </div>
+  <div class="row p-0 m-0 text-section" style="white-space: nowrap">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test-2">
+        <span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span>
+        <span>USE CASES</span>
+        <span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span>
+        <span>USE CASES</span> <span>USE CASES</span><span> USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span><span>USE CASES</span>
+        <span>USE CASES</span> <span>USE CASES</span> <span> USE CASES</span></p>
+    </div>
+  </div>
+  <div class="row p-0 m-0 showcase">
+    <div class="col-md-6 d-none d-md-block p-0">
+      <div class="circle" id="circle2">
+        <svg width="970" height="1000" viewBox="0 0 928 962" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="-33.9961" width="957" height="959" fill="#A5B9FF"/>
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-34" y="0" width="958" height="961">
+            <rect x="-34" width="957.004" height="961" fill="black"/>
+          </mask>
+          <g mask="url(#mask0)">
+            <path d="M923.004 961V0L-35.998 961H923.004Z" fill="white"/>
+          </g>
+          <path d="M423 712C423 850.071 534.929 962 673 962C811.071 962 923 850.071 923 712L423 712Z" fill="black"/>
+          <circle cx="478.5" cy="601.5" r="110.5" fill="#FEBA53"/>
+        </svg>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 d-flex flex-wrap flex-row p-0">
+      <div class="img col-6 p-5 p-xl-0">
+        <p> Parties and celebrations</p>
+      </div>
+      <div class="img col-6 p-5 p-xl-0">
+        <p> Everyday working calls</p>
+      </div>
+      <div class="img col-6 p-5 p-xl-0">
+        <p> Shows and Competitors</p>
+      </div>
+      <div class="img col-6 p-5 p-xl-0">
+        <p>Conferences and presentations</p>
+      </div>
+    </div>
+  </div>
 
-       </div>
-       
+  <script>
+
+  </script>
+
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test">
+        <span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span>
+        <span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span>
+        <span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span>
+        <span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span><span>USE FEATURES</span>
+        <span>USE FEATURES</span><span>USE FEATURES</span></p>
+    </div>
+  </div>
+  <div class="row p-0 m-0 examples-wrapper d-md-none">
+    <div class="col-12 p-0 col-md-6 example-block d-flex justify-content-center align-items-center">
+      <h4 data-aos="fade-left">Different rooms to join</h4>
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%203.png" alt="element" class="element">
+      <img src="assets/img/Ellipse%2044.png" alt="ellipse">
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block d-flex justify-content-center align-items-center">
+      <h4 data-aos="fade-right">Presentation and video demos in high quality</h4>
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block rectangle-black">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.13%202.png" alt="element" class="element">
+      <img src="assets/img/Rectangle%20100.png" alt="rectangle" class="rectangle-black">
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block d-flex justify-content-center align-items-center">
+      <h4 data-aos="fade-left">Low Latency Discussions</h4>
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%203.png" alt="element" class="element">
+      <img src="assets/img/Ellipse%2044.png" alt="ellipse">
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block d-flex justify-content-center align-items-center">
+      <h4 data-aos="fade-right">Immersive AR Experience</h4>
+    </div>
+    <div class="col-12 p-0 col-md-6 example-block">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.13%202.png" alt="element" class="element">
+      <img src="assets/img/Rectangle%20100.png" alt="rectangle" class="rectangle-black">
+    </div>
+  </div>
+  <div class="row p-0 m-0 examples-wrapper-2">
+    <div class="col-6 p-0 example-block">
+      <img src="assets/img/Ellipse%2044.png" alt="ellipse">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%206.png" alt="element" class="element">
+    </div>
+    <div class="col-6 d-flex example-block justify-content-center align-items-center">
+      <h4 data-aos="fade-left" data-aos-offset="500">Different rooms to join</h4>
+    </div>
+    <div class="col-6 d-flex example-block justify-content-center align-items-center">
+      <h4 style="text-align: left; margin-left: 100px" data-aos="fade-right" data-aos-offset="500">Presentation and
+        video <br>demos in high quality</h4>
+    </div>
+    <div class="col-6 p-0 example-block" style="background: #A5B9FF">
+      <img src="assets/img/Rectangle%20100.png" alt="ellipse" class="rectangle-black">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.13%202.png" alt="element" class="element">
+    </div>
+    <div class="col-6 p-0 example-block" style="background: #000">
+      <div class="half-circle"></div>
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%206.png" alt="element" class="element">
+    </div>
+    <div class="col-6 d-flex example-block justify-content-center align-items-center">
+      <h4 data-aos="fade-left" data-aos-offset="500">Low Latency Discussions</h4>
+    </div>
+    <div class="col-6 d-flex example-block justify-content-center align-items-center">
+      <h4 data-aos="fade-right" data-aos-offset="500">Immersive AR Experience</h4>
+    </div>
+    <div class="col-6 p-0 example-block">
+      <img src="assets/img/Ellipse%2046.png" alt="ellipse">
+      <img src="assets/img/Снимок%20экрана%202021-03-30%20в%2021.16%206.png" alt="element" class="element">
+    </div>
+  </div>
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test">
+        <span>ADMINISTRATION FEATURES</span><span>ADMINISTRATION FEATURES</span><span>ADMINISTRATION FEATURES</span><span>ADMINISTRATION FEATURES</span>
+        <span>ADMINISTRATION FEATURES</span> <span>ADMINISTRATION FEATURES</span></p>
+    </div>
+  </div>
+
+  <div class="row p-0 m-0 best-section d-flex justify-content-start justify-content-md-end flex-row">
+    <div class="col-12 col-md-6">
+      <h5>Streamcast is the best and here is why:</h5>
+    </div>
+    <div class="col-6 col-md-3 box addaptive">
+      <div class="addaptive">
+        <svg width="126" height="104" viewBox="0 0 126 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="126" height="104" rx="10" fill="#FEBA53"/>
+          <path d="M21.8252 30.249L21.3752 73.4494L47.7001 51.6241L21.8252 30.249Z" fill="#A5B9FF"/>
+          <rect x="63" y="104" width="76" height="63" rx="10" transform="rotate(-90 63 104)" fill="#A5B9FF"/>
+          <path d="M84.8252 44.249L84.3752 87.4494L110.7 65.6241L84.8252 44.249Z" fill="#FEBA53"/>
+        </svg>
+        <h6>Adaptive interface</h6>
+        <p>You can predefine platforms that will be allowed for the conference. We support Windows, MacOS and Linux
+          users.
+          Also it is possible to connect with mobile device both on IoS and Android</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 box internet-quality">
+      <div class="internet-quality">
+        <svg width="87" height="111" viewBox="0 0 87 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="100.824" width="43.5108" height="19" rx="9.5" transform="rotate(-57.8139 0 100.824)" fill="#FEBA53"/>
+          <ellipse cx="44.5" cy="42" rx="42.5" ry="42" fill="#A5B9FF"/>
+          <path d="M36.8252 20.249L36.3752 63.4494L62.7001 41.6241L36.8252 20.249Z" fill="#FEBA53"/>
+        </svg>
+        <h6>Internet quality control</h6>
+        <p>Users can enter only rooms where they are allowed</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 box content-management">
+      <div class="content-management">
+        <svg width="70" height="84" viewBox="0 0 70 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="84" width="84" height="70" transform="rotate(-90 0 84)" fill="#A5B9FF"/>
+          <path d="M0 72C15.464 72 28 59.464 28 44C28 28.536 15.464 16 0 16L0 72Z" fill="#FEBA53"/>
+          <path d="M28 83C51.196 83 70 64.6437 70 42C70 19.3563 51.196 1 28 1L28 83Z" fill="#FEBA53"/>
+        </svg>
+        <h6>Content management</h6>
+
+        <p>You can manage AR content and add it yourself. Platform support all UE compatible graphics</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 box live-recording">
+      <div class="live-recording">
+        <svg width="158" height="81" viewBox="0 0 158 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="6" width="86" height="71" rx="10" fill="#FEBA53"/>
+          <path
+              d="M120.701 55.3597L120.973 25.309C121.05 16.8016 111.144 12.0904 104.593 17.5187L86.3016 32.6755C81.4717 36.6778 81.4763 44.0872 86.3113 48.0834L104.331 62.9773C110.819 68.3399 120.625 63.7767 120.701 55.3597Z"
+              fill="#FEBA53"/>
+          <rect x="8" y="68" width="51" height="71" rx="10" transform="rotate(-90 8 68)" fill="#A5B9FF"/>
+          <circle cx="16.5" cy="59.5" r="4.5" fill="#FEBA53"/>
+        </svg>
+        <h6>Live recording</h6>
+
+        <p>Platform allow to record all sessions. Also you can restream sessions on popular platforms like YouTube ad
+          Twitch</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 box roles">
+      <div class="roles">
+        <svg width="96" height="98" viewBox="0 0 96 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37.5 38C16.7893 38 0 54.5655 0 75H75C75 54.5655 58.2107 38 37.5 38Z" fill="#FEBA53"/>
+          <ellipse id="human" cx="37" cy="24.5" rx="25" ry="24.5" fill="#A5B9FF"/>
+          <ellipse cx="71" cy="73.5" rx="25" ry="24.5" fill="#A5B9FF"/>
+          <path d="M88.8831 67.5338L53.8078 67.526L71.7443 88.7168L88.8831 67.5338Z" fill="#FEBA53"/>
+        </svg>
+
+        <h6>Roles and authorizations</h6>
+        <p>Users can enter only rooms where they are allowed</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test">
+        <span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span>
+        <span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span>
+        <span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span>
+        <span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span><span>PICTURE QUALITY</span>
+        <span>PICTURE QUALITY</span><span>PICTURE QUALITY</span></p>
+    </div>
+
+  </div>
+  <div class="row p-0 m-0 quality-section d-flex flex-row justify-content-end">
+    <div class="col-12 col-md-6 d-flex justify-content-center position-relative">
+      <p>Finally you can have your business presentation in real 1080p30 without quality losses and jamming signal. Also
+        we support streaming with professional broadcasting cameras</p>
+    </div>
+    <div class="col-6 col-md-3 left">
+      <img src="assets/img/Ellipse%2027.png" alt="ellipse">
+      <img class="circle" src="assets/img/Ellipse%2072.png" alt="ellipse">
+    </div>
+    <div class=" rectangle col-6 col-md-3 right">
 
     </div>
-    <div class="fourth-row row">
-        <div class="roles">
-            <svg width="96" height="98" viewBox="0 0 96 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M37.5 38C16.7893 38 0 54.5655 0 75H75C75 54.5655 58.2107 38 37.5 38Z" fill="#FEBA53"/>
-                <ellipse cx="37" cy="24.5" rx="25" ry="24.5" fill="#A5B9FF"/>
-                <ellipse cx="71" cy="73.5" rx="25" ry="24.5" fill="#A5B9FF"/>
-                <path d="M88.8831 67.5338L53.8078 67.526L71.7443 88.7168L88.8831 67.5338Z" fill="#FEBA53"/>
-                </svg>
-                
-               <h2>Roles and authorizations</h2>
-                <p>Users can enter only rooms where they are allowed</p>
-       </div>
-       <div class="content-management">
-            <svg width="70" height="84" viewBox="0 0 70 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="84" width="84" height="70" transform="rotate(-90 0 84)" fill="#A5B9FF"/>
-                <path d="M0 72C15.464 72 28 59.464 28 44C28 28.536 15.464 16 0 16L0 72Z" fill="#FEBA53"/>
-                <path d="M28 83C51.196 83 70 64.6437 70 42C70 19.3563 51.196 1 28 1L28 83Z" fill="#FEBA53"/>
-                </svg>
-                <p>You can manage AR content and add it yourself. Platform support all UE compatible graphics</p>
-            
+    <div class="col-3 d-none d-md-block box" style="background: black">
 
-       </div>
-       <div class="live-recording">
-            <svg width="158" height="81" viewBox="0 0 158 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="6" width="86" height="71" rx="10" fill="#FEBA53"/>
-                <path d="M120.701 55.3597L120.973 25.309C121.05 16.8016 111.144 12.0904 104.593 17.5187L86.3016 32.6755C81.4717 36.6778 81.4763 44.0872 86.3113 48.0834L104.331 62.9773C110.819 68.3399 120.625 63.7767 120.701 55.3597Z" fill="#FEBA53"/>
-                <rect x="8" y="68" width="51" height="71" rx="10" transform="rotate(-90 8 68)" fill="#A5B9FF"/>
-                <circle cx="16.5" cy="59.5" r="4.5" fill="#FEBA53"/>
-                </svg>
-            <p>Platform allow to record all sessions. Also you can restream sessions on popular platforms like YouTube ad Twitch</p>
-                
+    </div>
+    <div class="col-3 d-none d-md-block box" style="background: rgb(165,185,255);
+background: linear-gradient(315deg, rgba(165,185,255,1) 50%, rgba(255,255,255,1) 50%);">
 
-       </div>
+    </div>
+  </div>
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test">
+        <span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span>
+        <span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span>
+        <span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span>
+        <span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span><span>AR CAPABILITIES</span>
+        <span>AR CAPABILITIES</span><span>AR CAPABILITIES</span></p>
     </div>
 
+  </div>
+  <div class="row p-0 m-0 explanation-text">
+    <div class="col-md-3 p-0 d-none d-md-block left">
+      <svg class="ar-capabilities" width="100%" height="100%" viewBox="0 0 227 454" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <rect width="227" height="227" transform="matrix(-1 0 0 1 227 0)" fill="#A5B9FF"></rect>
+        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="227" width="228" height="227">
+          <rect width="226.527" height="227" transform="matrix(-1 0 0 1 227 227)" fill="black"></rect>
+        </mask>
+        <g mask="url(#mask0)">
+          <path d="M0 453.054V226.054L227 453.054H0Z" fill="black"></path>
+        </g>
+        <ellipse cx="127" cy="279.5" rx="52" ry="52.5" fill="#FEBA53"></ellipse>
+      </svg>
+    </div>
+    <div class="col-12 col-md-9 box">
+      <p  data-aos="fade-left" data-aos-duration="2000">Платформа позволяет использовать ряд функций дополненной реальности, а именно:
+      </p>
+      <ul>
+        <li data-aos="fade-left" data-aos-duration="2000">Работа с динамическими камерами без использования дополнительного оборудования для формирования иммерсивного
+          опыта дополненной реальности
+        </li>
+        <li data-aos="fade-left" data-aos-duration="2000">Взаимодействие реальных и виртуальных объектов в реальном времени
+        </li>
+        <li data-aos="fade-left" data-aos-duration="2000">Возможность добавления динамических оверлеев с возможностью демонстрации данных, меняющихся в реальном
+          времени
+        </li>
+        <li data-aos="fade-left" data-aos-duration="2000">Привязка мимики и движений к виртуальным автарам
+        </li>
+        <li data-aos="fade-left" data-aos-duration="2000">Возможность обеспечения Lip Sync для аватара
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row p-0 m-0 text-section">
+    <div class="col d-flex align-items-center text-scroll-effect">
+      <p class="test">
+        <span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span>
+        <span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span>
+        <span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span>
+        <span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span><span>ROADMAP 2021</span>
+        <span>ROADMAP 2021</span><span>ROADMAP 2021</span></p>
+    </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  </div>
+  <div class="row p-0 m-0 roadmap-section">
+    <div class="col-6 col-md-3 box">
+      <p>
+        <span class="year">1Q 2021</span>
+        Corporate Product Released<br>
+        Multipeople conference support
+        Desktop and mobile version
+      </p>
+    </div>
+    <div class="col-6 col-md-3 box">
+      <p>
+        <span class="year">2Q 2021</span>
+        Cloud Version<br>
+        Chat and social media support
+      </p>
+    </div>
+    <div class="col-6 col-md-3 box">
+      <p>
+        <span class="year">3Q 2021</span>
+        Content maker<br>
+        Integration with Zoom and other Video messengers
+      </p>
+    </div>
+    <div class="col-6 col-md-3 box">
+      <p>
+        <span class="year">4Q 2021</span>
+        B2C Subscription version
+      </p>
+    </div>
+  </div>
+  <div class="row p-0 m-0 ready">
+    <div class="col-12 box">
+      <p>Ready to try?</p>
+      <a href="#" class="ready ready-hover">Request the demo</a>
+      <a href="#top" class="d-none d-md-block up"><img src="assets/img/up-arrow-black.png" alt="up-arrow">UP</a>
+    </div>
+  </div>
 
-<script src="./main.js"></script>
+  <script>
+    const arrow = document.querySelector('.up');
+
+    arrow.addEventListener('mouseenter', function () {
+      setTimeout(() => {
+        this.querySelector('img').src = 'assets/img/up-arrow-yellow.png';
+      }, 120);
+    })
+
+    arrow.addEventListener('mouseleave', function () {
+      setTimeout(() => {
+        this.querySelector('img').src = 'assets/img/up-arrow-black.png';
+      }, 100);
+    })
+  </script>
+
+  <div class="row m-0 footer">
+    <div class="col-6 p-0 left">
+      <ul>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+      <p>&copy; Streamcast 2021</p>
+    </div>
+    <div class="col-6 right p-0">
+      <img src="assets/img/Ellipse%2071.png" alt="ellipse">
+      <img src="assets/img/Ellipse%2071.png" alt="ellipse">
+    </div>
+  </div>
+
+
+  <div id="opacity"></div>
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!--<script src="assets/wow/dist/wow.min.js"></script>-->
+<!--<script>-->
+<!--  new WOW().init();-->
+<!--</script>-->
+<script src="assets/js/main.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
 </html>
